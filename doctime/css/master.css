@@ -1,0 +1,84 @@
+body {
+    background: #e8eaf6 !important;
+    padding-top: 70px;
+    padding-bottom: -70px;
+}
+
+/*css para hacer fade in */
+/*http://stackoverflow.com/questions/11679567/using-css-for-fade-in-effect-on-page-load*/
+.fade__ {
+-moz-animation-name: fadeIn;
+-webkit-animation-name: fadeIn;
+-ms-animation-name: fadeIn;
+animation-name: fadeIn;
+-moz-animation-duration: 1s;
+-webkit-animation-duration: 1s;
+-ms-animation-duration: 1s;
+animation-duration: 1s;
+-moz-animation-timing-function: ease-in-out;
+-webkit-animation-timing-function: ease-in-out;
+-ms-animation-timing-function: ease-in-out;
+animation-timing-function: ease-in-out;
+-moz-animation-fill-mode: forwards;
+-webkit-animation-fill-mode: forwards;
+-ms-animation-fill-mode: forwards;
+animation-fill-mode: forwards;
+}
+
+.fade__.fadeOut {
+  -moz-animation-name: fadeOut;
+  -webkit-animation-name: fadeOut;
+  -ms-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+
+@-moz-keyframes fadeIn { 0% { opacity: 0; visibility: hidden; } 100% { opacity: 1; visibility: visible; }}
+@-webkit-keyframes fadeIn { 0% { opacity: 0; visibility: hidden; } 100% { opacity: 1; visibility: visible; }}
+@-ms-keyframes fadeIn { 0% { opacity: 0; visibility: hidden; } 100% { opacity: 1; visibility: visible; }}
+@-keyframes fadeIn { 0% { opacity: 0; visibility: hidden; } 100% { opacity: 1; visibility: visible; }}
+
+@-moz-keyframes fadeOut { 0% { opacity: 1; visibility: visible; }  100% { opacity: 0; visibility: hidden; }}
+@-webkit-keyframes fadeOut { 0% { opacity: 1; visibility: visible; }  100% { opacity: 0; visibility: hidden; }}
+@-ms-keyframes fadeOut { 0% { opacity: 1; visibility: visible; } 100% { opacity: 0; visibility: hidden; }}
+@-keyframes fadeOut { 0% { opacity: 1; visibility: visible; } 100% { opacity: 0; visibility: hidden;  }}
+
+/*http://stackoverflow.com/questions/11679567/using-css-for-fade-in-effect-on-page-load*/
+
+.form-group.is-focused .form-control {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#303F9F), to(#303F9F)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
+  background-image: -webkit-linear-gradient(#303F9F, #303F9F), -webkit-linear-gradient(#303F9F, #303F9F);
+  background-image: -o-linear-gradient(#303F9F, #303F9F), -o-linear-gradient(#D2D2D2, #D2D2D2);
+  background-image: linear-gradient(#303F9F, #303F9F), linear-gradient(#D2D2D2, #D2D2D2);
+
+}
+.form-group.is-focused .form-control .material-input:after {
+  background-color: #303F9F;
+}
+.form-group.is-focused label,
+.form-group.is-focused label.control-label {
+  color: #303F9F;
+}
+
+.radio input[type=radio]:checked ~ .check,
+label.radio-inline input[type=radio]:checked ~ .check {
+  background-color: #303F9F;
+}
+.radio input[type=radio]:checked ~ .circle,
+label.radio-inline input[type=radio]:checked ~ .circle {
+  border-color: ;
+}
+.togglebutton label input[type=checkbox]:checked + .toggle {
+  background-color: rgba(48, 63, 159, 0.5);
+}
+.togglebutton label input[type=checkbox]:checked + .toggle:after {
+  background-color: #303F9F;
+  font-size: 20px;
+
+}
+.btn:not(.btn-raised).btn-primary, .input-group-btn .btn:not(.btn-raised).btn-primary {
+  color: #303F9F;
+}
+.radio input[type=radio]:checked ~ .circle, label.radio-inline input[type=radio]:checked ~ .circle{
+  border-color: #303F9F;
+}

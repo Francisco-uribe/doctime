@@ -1,0 +1,33 @@
+
+.bloqcentral{
+  background: #fff;
+  height:700px;
+}
+
+.bloqcentral h1{
+  margin-top: 7%;
+  text-align: center;
+  font-size: 30px;
+}
+
+.piepag h1{
+
+  text-align-last: left;
+  margin-top: 4%;
+  font-size: 15px;
+
+}
+
+.tablascroll{
+
+  overflow:scroll;
+  height:350px;
+  width: auto;
+}
+
+#BOTON{
+  padding: 0;
+}
+.btn{
+  background: #283593;
+}
