@@ -1,0 +1,14 @@
+.cuerpo{
+  margin-top: 3%;
+}
+
+.navegacion{
+  margin: 20px;
+  margin-left: 70%;
+}
+.table {
+  background: #FFF;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{
+  background: #283593;
+}

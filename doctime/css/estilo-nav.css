@@ -1,0 +1,58 @@
+
+body{
+	background:#e8eaf6;
+	font-family: 'Roboto', sans-serif;
+}
+#salir{
+	position:absolute;
+	right: 0;
+}
+.navbar {
+	background: #303f9f;
+	color: #ffffff;
+}
+.navbar-default .navbar-nav >li>a{
+		color: #e8eaf6;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+	background: #283593;
+	color:#fff;
+}
+.dropdown-menu{
+	background: #303f9f;
+}
+
+.dropdown-menu li a {
+	color:#fff;
+}
+.dropdown-menu li a:hover {
+	background: #283593;
+	color: #fff;
+}
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand{
+		color: #e8eaf6;
+}
+.navbar-default .navbar-nav>li>a:hover{
+	background: #283593;
+	color: #e8eaf6;
+	font-size: 101%;
+}
+.navbar-default .navbar-nav>li>a:focus{
+	color: #fff;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+	background: #283593;
+ color: #fff;
+}
+.navbar-brand{
+	background: #283593;
+	color: #e8eaf6;
+}
+
+.navbar-default .navbar-brand:hover{
+	background: #283593;
+	color: #e8eaf6;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+		background: #283593;
+}

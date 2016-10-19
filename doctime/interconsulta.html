@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>MEDICO CONSULTAS</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Roboto" >
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/estilo-nav.css">
+		<link rel="stylesheet" href="css/consultas.css">
+		<link rel="stylesheet" href="css/paneles.css">
+		<script language="JavaScript">
+			function enviar(){
+    	if (confirm('¿Estas seguro de enviar este formulario?')){ document.tuformulario.submit()
+    }
+}
+
+</script>
+</head>
+<body>
+	<!-- Comienza el menu de navegacion -->
+
+  <nav class="navbar navbar-default navbar-static-top" role="navigation" >
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex6-collapse">
+      <span class="sr-only">Desplegar navegación</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <div style="display:inline">
+    <a class="navbar-brand" href="#" ><p>Leocan Portus</p> </a>
+  </div>
+  </div>
+  <div class="collapse navbar-collapse navbar-ex6-collapse" >
+    <ul class="nav navbar-nav">
+      <li ><a href="perfil-medico.html">Perfil</a></li>
+      <li><a href="buscar-medicoM.html">Buscar Medicos</a></li>
+      <li><a href="buscar-pacienteM.html">Buscar Paciente</a></li>
+      <li><a href="#">Pedir hora</a></li>
+        <li><a href="consultamed.html">Consultas</a></li>
+				<li><a href="cronicosM.html">Cronicos</a></li>
+
+    </ul>
+    <ul  class="nav navbar-nav" id="salir">
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Nombre Usuario <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Perfil</a></li>
+					<li><a href="#">Configuraciones</a></li>
+					<li role="separator" class="divider"></li>
+					<li><a href="#">Cerrar sesión</a></li>
+				</ul>
+			</li>
+     </ul>
+  </div>
+</nav>
+<!-- AQUI TERMINA EL MENU DE NAVEGACION  -->
+<div class="col-md-1"></div>
+
+<!-- CODIGO PARA OSCURECER EL FONDO -->
+	<div id="fade" class="overlay" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">
+	</div>
+	<!-- FIN DEL CODIGO -->
+
+<!-- AQUI COMIENZA CONTENEDOR DEL FORMULARIO INTERCONSULTA -->
+	<div id="light" class="modal">
+		<div class="interconsulta">
+			<h3 align=center>FORMULARIO DE INTERCONSULTA</h3>
+			<p><u><b>DATOS DEL PACIENTE:</b></u></p><br>
+				<div class="datos personal-izquierda">
+					<br><p><b>Nombre:</b></p>
+					<p>Antonio Ceballos</p>
+					<br><p><b>Rut:</b></p>
+					<p>19.999.999-9</p>
+					<br><p><b>Zona:</b></p>
+					<p>A</p>
+				</div>
+				<div class="datos personal-central">
+					<p><b>Sexo:</b></p>
+					<p>M</p>
+					<br><p><b>Edad:</b></p>
+					<p>20 Años</p>
+				</div>
+				<div class="datos personal-derecha">
+					<p><b>Fecha:</b></p>
+					<p>14/10/2016</p>
+					<br><p><b>Fono:</b></p>
+					<p>999999999</p>
+				</div>
+				<div class="area-medica">
+					<p><b>Area Medica:</b></p>
+					<select name="area">
+						<option>Cirugia General</option>
+						<option>Geratria</option>
+						<option>Neurologia</option>
+						<option>Oftalmologia</option>
+						<option>Traumatologia</option>
+					</select>
+				</div>
+				<p><u><b>MOTIVO POR EL CUAL SOLICITA LA INTERCONSULTA:</b></u></p><br>
+					<textarea name="descripcion" id="descripcion"  rows="6" class="form-control"></textarea>
+					<button name="enviar_form1" type="submit" class="btn btn-success"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Enviar</a></button>
+					<button name="reiniciar_form1" type="reset" class="btn btn-default"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Cancelar</a></button>
+		</div>
+  </div>
+	<!-- AQUI TERMINA EL FORMULARIO DE INTERCONSULTA -->
+
+<!-- AQUI COMIENZA EL FORMULARIO DE ATENCION PARTE IZQUIERDA -->
+<div class="col-md-5">
+	<div class="container-formulario">
+	<h3 align=center>FORMULARIO DE ATENCIÓN</h3><br>
+	<p><u><b>DATOS DEL PACIENTE:</b></u></p><br>
+		<div class="datos personal-izquierda">
+			<br><p><b>Nombre:</b></p>
+			<p>Antonio Ceballos</p>
+			<br><p><b>Rut:</b></p>
+			<p>19.999.999-9</p>
+			<br><p><b>Zona:</b></p>
+			<p>A</p>
+		</div>
+		<div class="datos personal-central">
+			<p><b>Sexo:</b></p>
+			<p>M</p>
+			<br><p><b>Edad:</b></p>
+			<p>20 Años</p>
+		</div>
+		<div class="datos personal-derecha">
+			<p><b>Fecha:</b></p>
+			<p>14/10/2016</p>
+			<br><p><b>Fono:</b></p>
+			<p>999999999</p>
+		</div>
+		<p><u><b>DIAGNÓSTICO PROBABLE:</b></u></p><br>
+			<textarea name="descripcion" id="descripcion"  rows="6" class="form-control"></textarea>
+		<p><u><b>INDICACIONES:</b></u></p><br>
+			<textarea name="medicamentos" id="medicamentos"  rows="6" class="form-control"></textarea><br>
+		<button name="enviar_form1" type="submit" onclick="enviar()" class="btn btn-success">Enviar</button>
+		<button name="reiniciar_form1" type="reset" class="btn btn-default">Reiniciar</button>
+	</div>
+<!-- BOTON INTERCONSULTA -->
+	<div class="interconsula">
+		<button name="enviar_form1" type="submit"  class="btn btn-block"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">PEDIR INTERCONSULTA</a></button>
+	</div>
+</div>
+<!-- AQUI TERMINA EL FORMULARIO DE ATENCION PARTE IZQUIERDA -->
+
+<div class="col-md-5">
+<!-- AQUI COMIENZA EL HISTORIAL DERECHA -->
+	<div class="container-derecha">
+		<div class="container-historial">
+			<div class="panel panel-default table-responsive">
+				<div class="panel-heading"  align=center>HISTORIAL CLINICO DEL PACIENTE</div>
+					<table class="table">
+		    	<thead>
+		      	<tr>
+		        	<th>Medico</th>
+							<th>Fecha</th>
+							<th>Link</th>
+		      	</tr>
+		    	</thead>
+					<tbody>
+		      	<tr>
+		        	<td>Alberto Carlos Morales Villanueva </td>
+							<td>14/10/2016</td>
+							<td><a href="interconsulta.html">Link1</a></td>
+		      	</tr>
+		      	<tr>
+							<td>Alberto Carlos Morales Villanueva </td>
+							<td>12/10/2016</td>
+							<td><a href="interconsulta.html">Link2</a></td>
+		      	</tr>
+		      	<tr>
+							<td>Alberto Carlos Morales Villanueva </td>
+							<td>14/09/2016</td>
+							<td><a href="interconsulta.html">Link3</a></td>
+		      	</tr>
+						<tr>
+							<td>Alberto Carlos Morales Villanueva </td>
+							<td>14/06/2016</td>
+							<td><a href="interconsulta.html">Link4</a></td>
+		      	</tr>
+						<tr>
+							<td>Alberto Carlos Morales Villanueva </td>
+							<td>14/04/2016</td>
+							<td><a href="interconsulta.html">Link5</a></td>
+		      	</tr>
+		    	</tbody>
+	   			</table>
+			</div>
+		</div>
+	</div>
+<!-- AQUI TERMINA EL HISTORIAL DERECHA -->
+
+<!-- AQUI COMIENZA EL LISTADO DE FARMACOS DERECHA -->
+	<div class="container-farmacos">
+			<div class="panel panel-default table-responsive">
+				<div class="panel-heading" align=center>MEDICAMENTOS</div>
+					<div class="panel-body">
+						<div class="input-group input-group-sm">
+							<div class="buscador">
+  							<input type="text" class="form-control" placeholder="BUSCAR ACTIVO">
+							</div>
+							<div class="boton">
+								<button name="buscar_form1" type="submit" class="btn btn-info">Buscar</button>
+							</div>
+						</div>
+  				</div>
+					<table class="table">
+		    	<thead>
+		      	<tr>
+		        	<th>Producto </th>
+							<th>Principio Activo</th>
+							<th>Laboratorio</th>
+		      	</tr>
+		    	</thead>
+					<tbody>
+						<tr>
+		        	<td>KETOPROFENO CÁPSULAS 50 mg</td>
+							<td>KETOPROFENO</td>
+							<td>LABORATORIO CHILE S.A</td>
+		      	</tr>
+						<tr>
+		        	<td>FLOGOFIN CÁPSULAS 50 mg</td>
+							<td>KETOPROFENO</td>
+							<td>LABORATORIO CHILE S.A.</td>
+		      	</tr>
+						<tr>
+		        	<td>KEPRODOL CÁPSULAS 50 mg</td>
+							<td>KETOPROFENO</td>
+							<td>LABORATORIOS ANDRÓMACO S.A</td>
+		      	</tr>
+						<tr>
+		        	<td>DOLOFAR CÁPSULAS 50 mg</td>
+							<td>KETOPROFENO</td>
+							<td>MEDIPHARM LTDA</td>
+		      	</tr>
+		    	</tbody>
+	   			</table>
+			</div>
+	</div>
+<!-- AQUI TERMINA EL LISTADO DE FARMACOS -->
+
+<!-- BOTON PARA TERMINAR LA CONSULTA -->
+<button type="button" class="btn btn-danger btn-lg btn-block">TERMINAR CONSULTA</button>
+</div>
+
+<div class="col-md-1"> </div>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+</html>
