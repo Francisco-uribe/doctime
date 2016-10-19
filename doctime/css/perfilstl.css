@@ -1,0 +1,104 @@
+.bloque-der{
+background: #fff;
+padding: 50px;
+}
+
+.datosdoc{
+  margin-top:10px;
+}
+.datosdoc h1{
+font-size:200%;
+}
+
+img{
+width:70%;
+margin-left:70px;
+display: inline-block;
+}
+.avtr{
+  display: inline-block;
+
+}
+.titl1 h5{
+  font-size: 15px;
+  text-align:center;
+  padding: 10px;
+  color: #fff;
+}
+.titl1{
+  display: block;
+  background: #303f9f;
+  margin: 0 -65px;
+
+}
+
+.table{
+margin-top:100px;
+}
+
+/*calificacion estrellas*/
+.estrellas {
+
+  font-size: 0;
+	display: inline-block;
+}
+
+.estrellas a {
+	text-decoration: none;
+	display: inline-block;
+	font-size: 40px;
+	font-size: 2rem;
+  color: #888;
+}
+
+.estrellas a {
+	color:#FFFF00;
+}
+
+.estrellas > a:hover ~ a {
+	color: #888;
+}
+
+/*ajustar contenido a tamaño de pantalla */
+@media screen and (max-width:995px){
+ .bloque-der{
+	 width:783px;
+ }
+	img{
+	width:116px;
+	margin-left:70px;
+	}
+
+	.avtr{
+	  	width:200px;
+			display:inline-block;
+
+	}
+  .col-md-3{
+		width:300px;
+		display:inline-block;
+
+	}
+	.eval{
+
+		display:inline-block;
+		width:300px;
+		margin-left:70px;
+	}
+}
+.eval{
+		display:inline-block;
+		width:300px;
+    height: 00px;
+		margin-left:70px;
+		margin-top:0;
+	}
+/*estilos bloque abajo*/
+.consulta{
+  position: relative;
+	margin-top:2%;
+	width: 100%;
+}
+.cuerpo-tabla{
+  margin-top: 50px;
+}

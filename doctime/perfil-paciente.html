@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Paciente</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Roboto" >
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/estilo-nav.css">
+    <link rel="stylesheet" href="css/perfil-paciente.css">
+
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-static-top" role="navigation" >
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex6-collapse">
+      <span class="sr-only">Desplegar navegación</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <div style="display:inline">
+    <a class="navbar-brand" href="#" ><p>Leocan Portus</p> </a>
+  </div>
+  </div>
+  <div class="collapse navbar-collapse navbar-ex6-collapse" >
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="perfil-paciente.html">Perfil</a></li>
+      <li><a href="buscar-medicoP.html">Buscar Medico</a></li>
+      <li><a href="#">Pedir hora</a></li>
+      <li><a href="#">Comentar</a></li>
+
+    </ul>
+    <ul  class="nav navbar-nav" id="salir">
+			<li class="dropdown">
+			 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Nombre Usuario <span class="caret"></span></a>
+			 <ul class="dropdown-menu">
+				 <li><a href="#">Perfil</a></li>
+				 <li><a href="#">Configuraciones</a></li>
+				 <li role="separator" class="divider"></li>
+				 <li><a href="#">Cerrar sesión</a></li>
+			 </ul>
+		 </li>
+     </ul>
+  </div>
+</nav>
+<!-- AQUI TERMINA EL MENU DE NAVEGACION  -->
+
+
+  <div class="container col-md-11">
+    <div class="cuerpo-perfil">
+					<div class="head-perfil">
+								<div class="foto-perfil">
+									<img src="imagenes/hombre.jpg" class="usuario" alt="" />
+
+								</div>
+								<div class="titulo">
+										<h2>Antonio Ceballos Riquelmes</h2>
+								</div>
+								<div class="datos-perfil">
+									<div class="datos1">
+										<p><strong>Rut:</strong> 18808201-7</p>
+										<p><strong>Edad:</strong> 22</p>
+										<p><strong>Sector:</strong> A</p>
+									</div>
+									<div class="datos2">
+										<p><strong>Sexo:</strong> M</p>
+										<p><strong>Correo:</strong> furibe@ing.ucsc.cl</p>
+										<p><strong>G.S:</strong></p>
+									</div>
+								</div>
+					</div>
+					<div class="body-perfil">
+						<div class="medico">
+              <h3 id="nombre-medico"><strong>Doctor: </strong>Alberto Morales </h3>
+            </div>
+						<ul class="list-group">
+  <li class="list-group-item bot" id="head-diag">Diagnostico</li>
+  <li class="list-group-item" id="diag" ><p>
+  	asjdjsahjkdsad
+		asdsakjdhkajhdsjakhdkasjdhkjasdhjskadhkjasdhkjasdhsahdkjsahdkjshad
+		asdkjashjdkhsakdjhaskjdhkjashkdhasjaskdhkjahdkjahdkjsahdkjsa
+		adasdkjshadjkasd
+  </p></li>
+  <li class="list-group-item bot" id="head-trat">Tratamientos</li>
+  <li class="list-group-item" id="trat"><p>
+  	ksjadhkashdkjashjkdhaskjhdkjashdkjashdkjhaskjdhsjakhdkajsdkasd
+		askdjhaskjdhksjahdkashdkasjhdjkashdksajhdkjasdhsad
+		askdjhaskjhdksda
+  </p></li>
+  <li class="list-group-item bot" id="head-dat">Datos del medico</li>
+	<li class="list-group-item" id="dat" ><p>
+		kajsdhkajsdhkjsahdkjashdksahdkjashdkjshjdkhajshdkad
+		asdkjhasjkdhkajshdkjsahjdhaskjdhkjashdkjasdhkjashdkjsad
+		akjdhkjsahdkjashdkjhasdkjhasasd
+	</p></li>
+
+</ul>
+
+
+
+            <div class="Calificar">
+                <button type="button" class="btn btn-default btn-block" name="button">Calificar</button>
+            </div>
+					</div>
+		</div>
+    <div class="lateral">
+      <div class="historial">
+        <div class="panel panel-default">
+              <div class="panel-heading">
+                    <h3 class="panel-title">Historial</h3>
+              </div>
+              <div class="panel-body">
+                <table id="t-consultas" class="table " cellspacing="0" width="100%">
+                  <thead>
+                    <tr class="active">
+                      <th>Medico</th>
+                      <th>Fecha</th>
+                      <th>Hora</th>
+                      <th>Ver</th>
+                    </tr>
+                  </thead>
+                  <tr>
+                    <th class="1" id="nom">Juan Alvarez</th>
+                    <th class="1" id="fecha">12-jun-2016</th>
+                    <th class="1" id="hora">13:00</th>
+                    <td class="1" id="ver"><button type="button" onclick="mostrar_consulta(this.id)" id="1" class="btn btn-primary btn-block" style="height=30%">inicio</button></td>
+                  </tr>
+                  <tr>
+                    <th>Juan Alvarez</th>
+                    <th>12-jun-2016</th>
+                    <th>13:00</th>
+                    <td id="ver"><button type="button" class="btn btn-primary btn-block" name="2" style="height=30%">inicio</button></td>
+                  </tr>
+                  <tr>
+                    <th>Juan Alvarez</th>
+                    <th>12-jun-2016</th>
+                    <th>13:00</th>
+                    <td id="ver"><button type="button" class="btn btn-primary btn-block" name="3" style="height=30%">inicio</button></td>
+                  </tr>
+                  <tr>
+                    <th>Juan Alvarez</th>
+                    <th>12-jun-2016</th>
+                    <th>13:00</th>
+                    <td id="ver"><button type="button" class="btn btn-primary btn-block" style="height=30%">inicio</button></td>
+                  </tr>
+                </table>
+              </div>
+      </div>
+      <div class="proximos">
+        <div class="panel panel-default">
+              <div class="panel-heading">
+                    <h3 class="panel-title">Consultas proximas</h3>
+              </div>
+              <div class="panel-body">
+                <table id="t-consultas" class="table " cellspacing="0" width="100%">
+                  <thead>
+                    <tr class="active">
+                      <th>Medico</th>
+                      <th>Fecha</th>
+                      <th>Hora</th>
+                    </tr>
+                  </thead>
+                  <tr>
+                    <th>Juan Alvarez</th>
+                    <th>12-jun-2016</th>
+                    <th>13:00</th>
+                  </tr>
+                  <tr>
+                    <th>Juan Alvarez</th>
+                    <th>12-jun-2016</th>
+                    <th>13:00</th>
+                  </tr>
+                  <tr>
+                    <th>Juan Alvarez</th>
+                    <th>12-jun-2016</th>
+                    <th>13:00</th>
+                  </tr>
+                  <tr>
+                    <th>Juan Alvarez</th>
+                    <th>12-jun-2016</th>
+                    <th>13:00</th>
+                  </tr>
+                </table>
+              </div>
+      </div>
+      </div>
+    </div>
+
+  </div>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	var diag="#diag";
+	var Hdiag="#head-diag";
+	var trat="#trat";
+	var Htrat="#head-trat";
+	var dat="#dat";
+	var Hdat="#head-dat";
+
+panel(Hdiag,diag);
+panel(Htrat,trat);
+panel(Hdat,dat);
+	function panel(a,b){
+			$(a).click(function(){
+				var estado= $(b).css("display");
+				if(estado == "none"){
+						 $(b).fadeIn(200);
+						 $(this).css("background","#303F9F");
+						 $(this).css("color","#fff");
+				}
+
+				if(estado == "list-item"){
+					$(b).fadeOut(100);
+					$(this).css("background","#fff");
+					$(this).css("color","#000");
+				}
+			});
+		}
+});
+function mostrar_consulta(boton){
+  document.getElementById("nombre-medico").innerHTML=document.getElementsById("nom").innerHTML;
+}
+
+</script>
+</body>
+</html>

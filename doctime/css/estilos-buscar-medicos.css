@@ -1,0 +1,112 @@
+
+#contenido{
+  margin-top: 3%;
+
+}
+
+#medicos{
+    height: 400px;
+    overflow: hidden;
+  position: relative;
+   display:block;
+}
+
+#medicos2{
+    height: 400px;
+  position: relative;
+  display: none;
+}
+ a{
+    color:#3F51B5;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+  color:#fff;
+  background: #3949AB;
+
+}
+.nav-tabs>li >a, .nav-tabs>li >a:focus, .nav-tabs>li >a:hover{
+  color:#fff;
+  background:#5C6BC0;
+
+}
+
+.nav-tabs.nav-justified>li>a:hover{
+  background: #303F9F;
+}
+
+.list-medicos{
+    width: 100%;
+    height: 45px;
+    display:block;
+    background: #9FA8DA;
+    border: solid #1A237E;
+   border-width: 0.1px 0.1px 0.1px 0.1px;
+   border-radius: 1px;
+   color: #000;
+   position: relative;
+}
+.list-medicos:hover{
+    background: #9FA8DA;
+}
+
+#img-medicos{
+ display:inline-block;
+  position: relative;
+  height: 70%;
+  border-radius: 50%;
+  margin: 7px;
+  margin-left: 5%;
+}
+
+#estrella-medicos{
+  height: 40%;
+  margin: 15px;
+  position: absolute;
+  right: 10px;
+}
+
+.titulo-medicos{
+  margin-left: 5%;
+  display:inline-block;
+}
+h4{
+  font-size: 15px;
+}
+
+@media screen and (max-width:1150px ) {
+  #titulo-medicos1{
+    display:none;
+  }
+ }
+
+ @media screen and (max-width:1090px ) {
+   #titulo-medicos2{
+     display:none;
+   }
+  }
+  @media screen and (max-width:600px ) {
+        h4{
+          font-size: 13px;
+        }
+   }
+
+   @media screen and (max-width:500px ) {
+      #estrella-medicos{
+        height: 30%;
+      }
+    }
+
+    @media screen and (max-width:450px ) {
+      .list-medicos{
+        width: 500px;
+      }
+      #cabecera{
+        width: 500px;
+      }
+      .navbar .navbar-default .navbar-static-top{
+        width: 500px;
+      }
+      .navbar-header{
+        width: 500px;
+      }
+     }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Roboto" >
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+      <link rel="stylesheet" href="index.css">
+
+      <script language="JavaScript">
+
+          function entrar(){
+            var rut=document.getElementById("rut").value;
+            var pw=document.getElementById("pw").value;
+                    if(rut=="some" && pw=="pw"){
+                      window.location.href='buscar-pacientes.html';
+
+                     }
+                    else if(rut=="paciente" && pw=="pw"){
+                    document.location.href='perfil-paciente.html';
+                    }
+                    else if(rut=="medico" && pw=="pw"){
+                    document.location.href='perfil-medico.html';
+                  }else{
+                    alert("error en los datos");
+                  }
+                  return 0;
+          }
+      </script>
+
+  </head>
+  <body>
+
+        <div class="login">
+            <div class="titulo">
+                <h3>Cesfam Leocan Portus</h3>
+                <h2><span id="doc">Doc</span><span>Time<span></h2>
+            </div>
+            <div class="formulario">
+              <form role="form" autocomplete="off">
+                          <div class="form-group">
+                            <label >Rut</label>
+                            <input class="form-control" id="rut">
+                          </div>
+                          <div class="form-group">
+                            <label for="ejemplo_password_1">Contraseña</label>
+                            <input type="password" class="form-control" id="pw">
+                          </div>
+                          <a href="JavaScript:entrar();" class="btn btn-default btn-block">
+                            Enviar
+                            </a>
+                </form>
+            </div>
+
+        </div>
+
+
+
+  </body>
+</html>
