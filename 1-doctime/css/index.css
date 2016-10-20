@@ -1,0 +1,86 @@
+
+body{
+  background: url(../imagenes/fondod.jpg) no-repeat center center fixed;
+}
+.olvido{
+  text-decoration: none;
+  font-size: 15px;
+  color: #fff;
+  position: relative;
+  right: 0;
+}
+.olvido:hover{
+  text-decoration: none;
+  font-size: 15px;
+  color:#ccc;
+}
+.login{
+  margin: 3% auto;
+  height: 400px;
+  width: 400px;
+  border-radius: 4px;
+  /*rgba(232,234,246,0.9);*/
+  padding: 20px;
+  color:#fff;
+  font-size: 20px;
+  text-shadow:-1px 1px 1px  rgba(26, 35, 126, 0.5);
+
+  }
+
+h3{
+  color:#fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  text-shadow:-1px 1px 1px  rgba(26, 35, 126, 0.5);
+
+}
+h2{
+  margin-top: -2px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 35px;
+  font-weight:bold;
+}
+#doc{
+ color: #283593;
+}
+.titulo{
+  text-align: center;
+  color: #fff;
+}
+
+.btn{
+  background:#1A237E;
+  color: #fff;
+  border-color:#1A237E;
+  font-weight: bold;
+}
+.btn:hover{
+  background:#0e165f;
+  color: #fff;
+  border-color:#1b2377;
+
+}
+.form-group label{
+
+  text-align: center;
+}
+.form-group{
+  margin: 5% 0;
+}
+  @media screen and (max-width:600px) {
+    .login{
+      margin-top: 8%;
+      width: 300px;
+      height: 300px;
+    }
+    h3{
+      font-size: 25px;
+    }
+    h2{
+      font-size: 25px;
+    }
+    img{
+      width: 60px;
+    }
+}

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>MEDICO CONSULTAS</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Roboto" >
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/estilo-nav.css">
+		<link rel="stylesheet" href="css/consultas.css">
+		<link rel="stylesheet" href="css/paneles.css">
+		<script language="JavaScript">
+			function enviar(){
+    	if (confirm('¿Estas seguro de enviar este formulario?')){ document.tuformulario.submit()
+    }
+}
+
+</script>
+</head>
+<body>
+	<!-- Comienza el menu de navegacion -->
+	<nav class="navbar navbar-default navbar-static-top" role="navigation" >
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex6-collapse">
+      <span class="sr-only">Desplegar navegación</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <div style="display:inline">
+    <a class="navbar-brand" href="#" ><p>Leocan Portus</p> </a>
+  </div>
+  </div>
+  <div class="collapse navbar-collapse navbar-ex6-collapse" >
+    <ul class="nav navbar-nav">
+      <li ><a href="perfil-medico.html">Perfil</a></li>
+      <li><a href="buscar-medicoM.html">Buscar Medicos</a></li>
+      <li><a href="buscar-pacienteM.html">Buscar Paciente</a></li>
+      <li><a href="pedir-horaM.html">Pedir hora</a></li>
+      <li><a href="consultamed.html">Consultas</a></li>
+			<li><a href="cronicosM.html">Cronicos</a></li>
+
+
+    </ul>
+    <ul  class="nav navbar-nav" id="salir">
+				 <li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Nombre Medico <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="perfil-medico.html">Perfil</a></li>
+						<li><a href="configuracionM.html">Configuraciones</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="index.html">Cerrar sesión</a></li>
+					</ul>
+				</li>
+     </ul>
+  </div>
+</nav>
+<!-- AQUI TERMINA EL MENU DE NAVEGACION  -->
+<div class="col-md-1"></div>
+
+<!-- AQUI COMIENZA EL FORMULARIO DE ATENCION PARTE IZQUIERDA -->
+<div class="col-md-6">
+	<div class="panel panel-default">
+  	<div class="panel-heading">
+    		<h3 class="panel-title" align=center>Formulario de Atención</h3>
+  	</div>
+  <div class="panel-body">
+		<p><b>DATOS DEL PACIENTE:</b></p><br>
+			<div class="datos personal-izquierda">
+				<p><b>Nombre:</b></p>
+				<p>Antonio Ceballos</p>
+				<br><p><b>Rut:</b></p>
+				<p>19.999.999-9</p>
+				<br><p><b>Zona:</b></p>
+				<p>A</p>
+			</div>
+			<div class="datos personal-central">
+				<p><b>Sexo:</b></p>
+				<p>M</p>
+				<br><p><b>Edad:</b></p>
+				<p>20 Años</p>
+			</div>
+			<div class="datos personal-derecha">
+				<p><b>Fecha:</b></p>
+				<p>14/10/2016</p>
+				<br><p><b>Fono:</b></p>
+				<p>999999999</p>
+			</div>
+			<p><b>DIAGNÓSTICO PROBABLE:</b></p><br>
+				<textarea name="descripcion" id="descripcion"  rows="5" class="form-control"></textarea>
+			<p><b>INDICACIONES:</b></p><br>
+				<textarea name="medicamentos" id="medicamentos"  rows="5" class="form-control"></textarea><br>
+			<button  type="submit" onclick="enviar()" class="btn btn-primary">Enviar</button>
+			<button type="reset" class="btn btn-default btn-reiniciar" >Reiniciar</button>
+		</div>
+  </div>
+</div>
+<!-- AQUI TERMINA EL FORMULARIO DE ATENCION PARTE IZQUIERDA -->
+
+
+
+<!-- AQUI COMIENZA EL HISTORIAL DERECHA -->
+<div class="col-md-4">
+	<div class="container-derecha">
+		<div class="container-historial">
+			<div class="panel panel-default table-responsive">
+				<div class="panel-heading">
+		    		<h3 class="panel-title" align=center>Historial clinico del Paciente</h3>
+		  	</div>
+					<table class="table table-striped table-bordered">
+		    	<thead>
+		      	<tr>
+		        	<th>Medico</th>
+							<th>Fecha</th>
+							<th>Link</th>
+		      	</tr>
+		    	</thead>
+					<tbody>
+		      	<tr>
+		        	<td>Alberto Carlos Morales Villanueva </td>
+							<td>14/10/2016</td>
+							<td id="BOTON">
+								<div class="bd-example">
+  								<button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Ver</button>
+  									<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    									<div class="modal-dialog" role="document">
+      									<div class="modal-content">
+													<div class="panel panel-default">
+												  	<div class="panel-heading">
+												    		<h3 class="panel-title" align=center>Formulario de Atención</h3>
+												  	</div>
+												  <div class="panel-body">
+														<p><b>DATOS DEL PACIENTE:</b></p><br>
+															<div class="datos personal-izquierda">
+																<p><b>Nombre:</b></p>
+																<p>Antonio Ceballos</p>
+																<br><p><b>Rut:</b></p>
+																<p>19.999.999-9</p>
+																<br><p><b>Zona:</b></p>
+																<p>A</p>
+															</div>
+															<div class="datos personal-central">
+																<p><b>Sexo:</b></p>
+																<p>M</p>
+																<br><p><b>Edad:</b></p>
+																<p>20 Años</p>
+															</div>
+															<div class="datos personal-derecha">
+																<p><b>Fecha:</b></p>
+																<p>14/10/2016</p>
+																<br><p><b>Fono:</b></p>
+																<p>999999999</p>
+															</div>
+															<p><b>DIAGNÓSTICO PROBABLE:</b></p><br>
+															<span>Amigdalitis aguda</span><br>
+															<p><b>INDICACIONES:</b></p><br>
+															<span>Amoxixilina 500GR C/U</span><br>
+															<button type="button" class="btn btn-primary" data-dismiss="modal">Salir</button>
+															</div>
+												  </div>
+      									</div>
+    									</div>
+  									</div>
+									</div>
+							</td>
+		      	</tr>
+		      	<tr>
+							<td>Alberto Carlos Morales Villanueva </td>
+							<td>12/10/2016</td>
+							<td id="BOTON">
+								<div class="bd-example">
+  								<button  type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Ver</button>
+  									<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    									<div class="modal-dialog" role="document">
+      									<div class="modal-content">
+													<div class="panel panel-default">
+												  	<div class="panel-heading">
+												    		<h3 class="panel-title" align=center>Formulario de Atención</h3>
+												  	</div>
+												  <div class="panel-body">
+														<p><b>DATOS DEL PACIENTE:</b></p><br>
+															<div class="datos personal-izquierda">
+																<p><b>Nombre:</b></p>
+																<p>Antonio Ceballos</p>
+																<br><p><b>Rut:</b></p>
+																<p>19.999.999-9</p>
+																<br><p><b>Zona:</b></p>
+																<p>A</p>
+															</div>
+															<div class="datos personal-central">
+																<p><b>Sexo:</b></p>
+																<p>M</p>
+																<br><p><b>Edad:</b></p>
+																<p>20 Años</p>
+															</div>
+															<div class="datos personal-derecha">
+																<p><b>Fecha:</b></p>
+																<p>14/10/2016</p>
+																<br><p><b>Fono:</b></p>
+																<p>999999999</p>
+															</div>
+															<p><b>DIAGNÓSTICO PROBABLE:</b></p><br>
+															<span>Amigdalitis aguda</span><br>
+															<p><b>INDICACIONES:</b></p><br>
+															<span>Amoxixilina 500GR C/U</span><br>
+															<button type="button" class="btn btn-primary" data-dismiss="modal">Salir</button>
+															</div>
+												  </div>
+      									</div>
+    									</div>
+  									</div>
+									</div>
+							</td>
+						</tr>
+		      	<tr>
+							<td>Alberto Carlos Morales Villanueva </td>
+							<td>14/09/2016</td>
+							<td id="BOTON">
+								<div class="bd-example">
+  								<button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Ver</button>
+  									<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    									<div class="modal-dialog" role="document">
+      									<div class="modal-content">
+													<div class="panel panel-default">
+												  	<div class="panel-heading">
+												    		<h3 class="panel-title" align=center>Formulario de Atención</h3>
+												  	</div>
+												  <div class="panel-body">
+														<p><b>DATOS DEL PACIENTE:</b></p><br>
+															<div class="datos personal-izquierda">
+																<p><b>Nombre:</b></p>
+																<p>Antonio Ceballos</p>
+																<br><p><b>Rut:</b></p>
+																<p>19.999.999-9</p>
+																<br><p><b>Zona:</b></p>
+																<p>A</p>
+															</div>
+															<div class="datos personal-central">
+																<p><b>Sexo:</b></p>
+																<p>M</p>
+																<br><p><b>Edad:</b></p>
+																<p>20 Años</p>
+															</div>
+															<div class="datos personal-derecha">
+																<p><b>Fecha:</b></p>
+																<p>14/10/2016</p>
+																<br><p><b>Fono:</b></p>
+																<p>999999999</p>
+															</div>
+															<p><b>DIAGNÓSTICO PROBABLE:</b></p><br>
+															<span>Amigdalitis aguda</span><br>
+															<p><b>INDICACIONES:</b></p><br>
+															<span>Amoxixilina 500GR C/U</span><br>
+															<button type="button" class="btn btn-primary" data-dismiss="modal">Salir</button>
+															</div>
+												  </div>
+      									</div>
+    									</div>
+  									</div>
+									</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Alberto Carlos Morales Villanueva </td>
+							<td>14/06/2016</td>
+							<td id="BOTON">
+								<div class="bd-example">
+  								<button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Ver</button>
+  									<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    									<div class="modal-dialog" role="document">
+      									<div class="modal-content">
+													<div class="panel panel-default">
+												  	<div class="panel-heading">
+												    		<h3 class="panel-title" align=center>Formulario de Atención</h3>
+												  	</div>
+												  <div class="panel-body">
+														<p><b>DATOS DEL PACIENTE:</b></p><br>
+															<div class="datos personal-izquierda">
+																<p><b>Nombre:</b></p>
+																<p>Antonio Ceballos</p>
+																<br><p><b>Rut:</b></p>
+																<p>19.999.999-9</p>
+																<br><p><b>Zona:</b></p>
+																<p>A</p>
+															</div>
+															<div class="datos personal-central">
+																<p><b>Sexo:</b></p>
+																<p>M</p>
+																<br><p><b>Edad:</b></p>
+																<p>20 Años</p>
+															</div>
+															<div class="datos personal-derecha">
+																<p><b>Fecha:</b></p>
+																<p>14/10/2016</p>
+																<br><p><b>Fono:</b></p>
+																<p>999999999</p>
+															</div>
+															<p><b>DIAGNÓSTICO PROBABLE:</b></p><br>
+															<span>Amigdalitis aguda</span><br>
+															<p><b>INDICACIONES:</b></p><br>
+															<span>Amoxixilina 500GR C/U</span><br>
+															<button type="button" class="btn btn-primary" data-dismiss="modal">Salir</button>
+															</div>
+												  </div>
+      									</div>
+    									</div>
+  									</div>
+									</div>
+							</td></tr>
+						<tr>
+							<td>Alberto Carlos Morales Villanueva </td>
+							<td>14/04/2016</td>
+							<td id="BOTON">
+								<div class="bd-example">
+  								<button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Ver</button>
+  									<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    									<div class="modal-dialog" role="document">
+      									<div class="modal-content">
+													<div class="panel panel-default">
+												  	<div class="panel-heading">
+												    		<h3 class="panel-title" align=center>Formulario de Atención</h3>
+												  	</div>
+												  <div class="panel-body">
+														<p><b>DATOS DEL PACIENTE:</b></p><br>
+															<div class="datos personal-izquierda">
+																<p><b>Nombre:</b></p>
+																<p>Antonio Ceballos</p>
+																<br><p><b>Rut:</b></p>
+																<p>19.999.999-9</p>
+																<br><p><b>Zona:</b></p>
+																<p>A</p>
+															</div>
+															<div class="datos personal-central">
+																<p><b>Sexo:</b></p>
+																<p>M</p>
+																<br><p><b>Edad:</b></p>
+																<p>20 Años</p>
+															</div>
+															<div class="datos personal-derecha">
+																<p><b>Fecha:</b></p>
+																<p>14/10/2016</p>
+																<br><p><b>Fono:</b></p>
+																<p>999999999</p>
+															</div>
+															<p><b>DIAGNÓSTICO PROBABLE:</b></p><br>
+															<span>Amigdalitis aguda</span><br>
+															<p><b>INDICACIONES:</b></p><br>
+															<span>Amoxixilina 500GR C/U</span><br>
+															<button type="button" class="btn btn-primary" data-dismiss="modal">Salir</button>
+															</div>
+												  </div>
+      									</div>
+    									</div>
+  									</div>
+									</div>
+							</td></tr>
+		    	</tbody>
+	   			</table>
+			</div>
+		</div>
+	</div>
+<!-- AQUI TERMINA EL HISTORIAL DERECHA -->
+
+<!-- VER MEDICAMENTOS -->
+<div class="medicamentos">
+	<div class="bd-example">
+  <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo">Ver Medicamentos</button>
+  <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+					<div class="panel panel-default">
+
+  					<div class="panel-heading" align=center>Medicamentos</div>
+  						<div class="panel-body">
+    						<div class="input-group">
+      						<span class="input-group-btn">
+        					<button class="btn btn-default" type="button">Buscar</button>
+      						</span>
+      						<input type="text" class="form-control">
+    						</div>
+								<div class="cantidad">
+									<br><b><p>Cantidad:</p></b>
+									<select name="area">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</div>
+								<br><button type="button" class="btn btn-primary">Agregar</button>
+								<button type="button" class="btn btn-primary" data-dismiss="modal">Salir</button>
+  						</div>
+					</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- TERMINO DE MEDICAMENTOS -->
+
+<!-- PEDIR UNA INTERCONSULTA -->
+<div class="interconsulta">
+	<div class="bd-example">
+		<button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo">Pedir interconsulta</button>
+			<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="panel panel-default">
+					  	<div class="panel-heading">
+					    		<h3 class="panel-title" align=center>Formulario de Atención</h3>
+					  	</div>
+						</div>
+						<div class="interconsulta1">
+							<p><b>DATOS DEL PACIENTE:</b></p><br>
+							<div class="datos personal-izquierda">
+								<p><b>Nombre:</b></p>
+								<p>Antonio Ceballos</p>
+								<br><p><b>Rut:</b></p>
+								<p>19.999.999-9</p>
+								<br><p><b>Zona:</b></p>
+								<p>A</p>
+							</div>
+							<div class="datos personal-central">
+								<p><b>Sexo:</b></p>
+								<p>M</p>
+								<br><p><b>Edad:</b></p>
+								<p>20 Años</p>
+							</div>
+							<div class="datos personal-derecha">
+								<p><b>Fecha:</b></p>
+								<p>14/10/2016</p>
+								<br><p><b>Fono:</b></p>
+								<p>999999999</p>
+							</div>
+							<div class="area-medica">
+								<p><b>Area Medica:</b></p>
+								<select name="area">
+									<option>Cirugia General</option>
+									<option>Geratria</option>
+									<option>Neurologia</option>
+									<option>Oftalmologia</option>
+									<option>Traumatologia</option>
+								</select>
+							</div>
+								<p><b>MOTIVO POR EL CUAL SOLICITA LA INTERCONSULTA:</b></p><br>
+								<textarea name="descripcion" id="descripcion"  rows="6" class="form-control"></textarea>
+								<button type="button" class="btn btn-primary" data-dismiss="modal">Enviar</button>
+								<button type="button" class="btn btn-primary" data-dismiss="modal">Salir</button>
+						</div>
+			  	</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- TERMINO DE INTERCONSULTA -->
+
+<!-- BOTON PARA TERMINAR CONSULTA MEDICA -->
+<div class="terminar-consulta">
+<a href="consultamed.html" class="btn btn-primary  btn-block">Terminar consulta</a>
+</div>
+<!-- FIN DE TODA -->
+
+<div class="col-md-1"> </div>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+</html>
