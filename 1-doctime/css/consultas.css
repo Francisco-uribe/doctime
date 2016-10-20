@@ -1,0 +1,58 @@
+
+.container-formulario {
+  background: white;
+  border-radius: 4px;
+  padding: 2%;
+  margin-bottom: 10px;
+}
+
+.panel-default{
+  border-radius: 4px;
+  margin-bottom: 13px;
+}
+.personal-izquierda{
+  width: 42%;
+  display: inline-block;
+}
+.personal-central{
+  width: 25%;
+  display: inline-block;
+}
+.personal-derecha{
+  width: 25%;
+  display: inline-block;
+}
+
+p{
+  display: inline-block;
+}
+.buscador{
+  display: inline-block;
+
+}
+
+#BOTON{
+padding: 0px;
+
+}
+
+.btn{
+  background: #283593;
+
+}
+.btn-default,.btn-reiniciar{
+  background: white;
+}
+
+.btn a{
+  text-decoration: none;
+  color: white;
+}
+
+
+.medicamentos,.interconsulta, .terminar-consulta{
+  margin: 4px 0;
+}
+.interconsulta1{
+  padding: 8px;
+}

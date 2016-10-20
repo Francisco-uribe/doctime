@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>SOME</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Roboto" >
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="http://code.jquery.com/jquery-1.12.3.js"></script>
+<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" media="screen" title="no title">
+		<link rel="stylesheet" href="css/estilo-nav.css">
+		<link rel="stylesheet" href="css/buscar-paciente.css">
+		<link rel="stylesheet" href="css/paneles.css">
+
+</head>
+<!-- AQUI TERMINA EL MENU DE NAVEGACION  -->
+<header>
+  <nav class="navbar navbar-default navbar-static-top" role="navigation" >
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex6-collapse">
+      <span class="sr-only">Desplegar navegación</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <div style="display:inline">
+    <a class="navbar-brand" href="#" ><p>Leocan Portus</p> </a>
+  </div>
+  </div>
+  <div class="collapse navbar-collapse navbar-ex6-collapse" >
+    <ul class="nav navbar-nav">
+      <li ><a href="perfil-paciente.html">Perfil</a></li>
+      <li ><a href="buscar-medicoP.html">Buscar Medico</a></li>
+      <li class="active"><a href="pedir-horaP.html">Pedir hora</a></li>
+      <li><a href="#">Comentar</a></li>
+
+    </ul>
+    <ul  class="nav navbar-nav" id="salir">
+				 <li class="dropdown">
+					 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Nombre Usuario <span class="caret"></span></a>
+					 <ul class="dropdown-menu">
+						 <li><a href="perfil-paciente.html">Perfil</a></li>
+						 <li><a href="paciente-config.html">Configuraciones</a></li>
+						 <li role="separator" class="divider"></li>
+						 <li><a href="index.html">Cerrar sesión</a></li>
+					 </ul>
+				 </li>
+     </ul>
+  </div>
+</nav>
+</header>
+<style>
+.tabla_hide {
+display: none;
+}
+.tabla_view {
+display: block;
+}
+.borde {
+padding: 0;
+}
+.panel_botones {
+margin-bottom: 10px;
+margin-right: 10px;
+}
+</style>
+<body>
+<div class="row">
+<div class="panel panel-default col-md-2 col-md-offset-1 col-sm-2 col-xs-12 borde panel_botones">
+  <div class="panel-heading">
+    <h3 class="panel-title">Tipo de hora</h3>
+  </div>
+  <div class="panel-body">
+    <div class="btn-group-vertical " style="width: 100%;">
+      <button id="btn_1" type="button" class="btn btn-default active" onclick="boton_1()">Medico General</button>
+      <button id="btn_2" type="button" class="btn btn-default" onclick="boton_2()"       >Dentista</button>
+      <button id="btn_3" type="button" class="btn btn-default" onclick="boton_3()"       >Matrona</button>
+      <button id="btn_4" type="button" class="btn btn-default" onclick="boton_4()"       >Especialidad</button>
+      <button id="btn_5" type="button" class="btn btn-default" onclick="boton_5()"       >Cronicos</button>
+    </div>
+  </div>
+</div>
+<script>
+  function boton_1(){
+    var x = document.getElementsByClassName("active");
+    $(x[0]).removeClass("active");
+    $(document.getElementById("btn_1")).addClass("active");
+    var y = document.getElementsByClassName("tabla_view");
+    $(y[0]).addClass("tabla_hide");
+    $(y[0]).removeClass("tabla_view");
+    $(document.getElementById("tabla_1")).removeClass("tabla_hide");
+    $(document.getElementById("tabla_1")).addClass("tabla_view");
+  }
+  function boton_2(){
+    var x = document.getElementsByClassName("active");
+    $(x[0]).removeClass("active");
+    $(document.getElementById("btn_2")).addClass("active");
+    var y = document.getElementsByClassName("tabla_view");
+    $(y[0]).addClass("tabla_hide");
+    $(y[0]).removeClass("tabla_view");
+    $(document.getElementById("tabla_2")).removeClass("tabla_hide");
+    $(document.getElementById("tabla_2")).addClass("tabla_view");
+  }
+  function boton_3(){
+    var x = document.getElementsByClassName("active");
+    $(x[0]).removeClass("active");
+    $(document.getElementById("btn_3")).addClass("active");
+    var y = document.getElementsByClassName("tabla_view");
+    $(y[0]).addClass("tabla_hide");
+    $(y[0]).removeClass("tabla_view");
+    $(document.getElementById("tabla_3")).removeClass("tabla_hide");
+    $(document.getElementById("tabla_3")).addClass("tabla_view");
+  }
+  function boton_4(){
+    var x = document.getElementsByClassName("active");
+    $(x[0]).removeClass("active");
+    $(document.getElementById("btn_4")).addClass("active");
+    var y = document.getElementsByClassName("tabla_view");
+    $(y[0]).addClass("tabla_hide");
+    $(y[0]).removeClass("tabla_view");
+    $(document.getElementById("tabla_4")).removeClass("tabla_hide");
+    $(document.getElementById("tabla_4")).addClass("tabla_view");
+  }
+  function boton_5(){
+    var x = document.getElementsByClassName("active");
+    $(x[0]).removeClass("active");
+    $(document.getElementById("btn_5")).addClass("active");
+    var y = document.getElementsByClassName("tabla_view");
+    $(y[0]).addClass("tabla_hide");
+    $(y[0]).removeClass("tabla_view");
+    $(document.getElementById("tabla_5")).removeClass("tabla_hide");
+    $(document.getElementById("tabla_5")).addClass("tabla_view");
+  }
+</script>
+<div class="panel panel-default col-md-8 col-sm-10 col-xs-12 borde">
+  <div class="panel-heading">
+    <h3 class="panel-title">Solicitud de horas medicas</h3>
+  </div>
+  <div class="panel-body">
+    <div id="tabla_1" class="table-responsive tabla_view">
+      <table class="table table-striped table-bordered dataTable no-footer table-hover">
+        <thead>
+          <tr>
+            <th>Hora</th>
+            <th>Medico</th>
+            <th>Solicitud</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>08:00</td>
+            <td>Dr. Vasquez</td>
+            <td><a href="#">Solicita hora aquí</a></td>
+          </tr>
+          <tr>
+            <td>08:30</td>
+            <td>Dr. Vasquez</td>
+            <td><a href="#">Solicita hora aquí</a></td>
+          </tr>
+          <tr class="warning">
+            <td>09:00</td>
+            <td>Dr. Vasquez</td>
+            <td>Hora aun no disponible</td>
+          </tr>
+          <tr>
+            <td>09:30</td>
+            <td>Dr. Vasquez</td>
+            <td><a href="#">Solicita hora aquí</a></td>
+          </tr>
+          <tr class="danger">
+            <td>10:00</td>
+            <td>Dr. Vasquez</td>
+            <td>Hora no disponible</td>
+          </tr>
+          <tr>
+            <td>10:30</td>
+            <td>Dr. Vasquez</td>
+            <td><a href="#">Solicita hora aquí</a></td>
+          </tr>
+          <tr class="success">
+            <td>11:00</td>
+            <td>Dr. Vasquez</td>
+            <td><a href="#">¿Cancelar hora?</a></td>
+          </tr>
+          <tr>
+            <td>11:30</td>
+            <td>Dr. Vasquez</td>
+            <td><a href="#">Solicita hora aquí</a></td>
+          </tr>
+          <tr class="danger">
+            <td>12:00</td>
+            <td>Dr. Vasquez</td>
+            <td>Hora no disponible</td>
+          </tr>
+          <tr>
+            <td>12:30</td>
+            <td>Dr. Vasquez</td>
+            <td><a href="#">Solicita hora aquí</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="tabla_2" class="table-responsive tabla_hide">
+      <table class="table table-striped table-bordered dataTable no-footer table-hover">
+        <thead>
+          <tr>
+            <th>Hora</th>
+            <th>Medico</th>
+            <th>Solicitud</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>08:00</td>
+            <td>Dr. Muelas Vasquez</td>
+            <td><a href="#">Solicita hora aquí</a></td>
+          </tr>
+          <tr>
+            <td>08:30</td>
+            <td>Dr. Muelas Vasquez</td>
+            <td><a href="#">Solicita hora aquí</a></td>
+          </tr>
+          <tr class="warning">
+            <td>09:00</td>
+            <td>Dr. Muelas Vasquez</td>
+            <td>Hora aun no disponible</td>
+          </tr>
+          <tr>
+            <td>09:30</td>
+            <td>Dr. Muelas Vasquez</td>
+            <td><a href="#">Solicita hora aquí</a></td>
+          </tr>
+          <tr class="danger">
+            <td>10:00</td>
+            <td>Dr. Muelas Vasquezz</td>
+            <td>Hora no disponible</td>
+          </tr>
+          <tr>
+            <td>10:30</td>
+            <td>Dr. Muelas Vasquez</td>
+            <td><a href="#">Solicita hora aquí</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="tabla_3" class="table-responsive tabla_hide">
+      <table class="table table-striped table-bordered dataTable no-footer table-hover">
+        <thead>
+          <tr>
+            <th>Hora</th>
+            <th>Medico</th>
+            <th>Solicitud</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>08:00</td>
+            <td>Dra. Zednuaf</td>
+            <td><a href="#">Solicita hora aquí</a></td>
+          </tr>
+          <tr>
+            <td>08:30</td>
+            <td>Dra. Zednuaf</td>
+            <td><a href="#">Solicita hora aquí</a></td>
+          </tr>
+          <tr class="warning">
+            <td>09:00</td>
+            <td>Dra. Zednuaf</td>
+            <td>Hora aun no disponible</td>
+          </tr>
+          <tr>
+            <td>09:30</td>
+            <td>Dra. Zednuaf</td>
+            <td><a href="#">Solicita hora aquí</a></td>
+          </tr>
+          <tr class="danger">
+            <td>10:00</td>
+            <td>Dra. Zednuaf</td>
+            <td>Hora no disponible</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="tabla_4" class="table-responsive tabla_hide">
+      <table class="table table-striped table-bordered dataTable no-footer table-hover">
+        <thead>
+          <tr>
+            <th>Hora</th>
+            <th>Medico</th>
+            <th>Solicitud</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="warning">
+            <td>09:00</td>
+            <td>Dr. Sandoval</td>
+            <td>Hora aun no disponible</td>
+          </tr>
+          <tr class="danger">
+            <td>10:00</td>
+            <td>Dr. Sandoval</td>
+            <td>Hora no disponible</td>
+          </tr>
+          <tr>
+            <td>10:30</td>
+            <td>Dr. Sandoval</td>
+            <td><a href="#">Solicita hora aquí</a></td>
+          </tr>
+          <tr class="success">
+            <td>11:00</td>
+            <td>Dr. Sandoval</td>
+            <td><a href="#">¿Cancelar hora?</a></td>
+          </tr>
+          <tr>
+            <td>11:30</td>
+            <td>Dr. Sandoval</td>
+            <td><a href="#">Solicita hora aquí</a></td>
+          </tr>
+          <tr class="danger">
+            <td>12:00</td>
+            <td>Dr. Sandoval</td>
+            <td>Hora no disponible</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="tabla_5" class="table-responsive tabla_hide">
+      <table class="table table-striped table-bordered dataTable no-footer table-hover">
+        <thead>
+          <tr>
+            <th>Hora</th>
+            <th>Medico</th>
+            <th>Solicitud</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>08:00</td>
+            <td>Dr. Roza</td>
+            <td><a href="#">Solicita hora aquí</a></td>
+          </tr>
+          <tr>
+            <td>08:30</td>
+            <td>Dr. Roza</td>
+            <td><a href="#">Solicita hora aquí</a></td>
+          </tr>
+          <tr class="warning">
+            <td>09:00</td>
+            <td>Dr. Roza</td>
+            <td>Hora aun no disponible</td>
+          </tr>
+          <tr>
+            <td>09:30</td>
+            <td>Dr. Roza</td>
+            <td><a href="#">Solicita hora aquí</a></td>
+          </tr>
+          <tr class="danger">
+            <td>10:00</td>
+            <td>Dr. Roza</td>
+            <td>Hora no disponible</td>
+          </tr>
+          <tr>
+            <td>10:30</td>
+            <td>Dr. Roza</td>
+            <td><a href="#">Solicita hora aquí</a></td>
+          </tr>
+          <tr class="success">
+            <td>11:00</td>
+            <td>Dr. Roza</td>
+            <td><a href="#">¿Cancelar hora?</a></td>
+          </tr>
+          <tr>
+            <td>11:30</td>
+            <td>Dr. Roza</td>
+            <td><a href="#">Solicita hora aquí</a></td>
+          </tr>
+          <tr class="danger">
+            <td>12:00</td>
+            <td>Dr. Roza</td>
+            <td>Hora no disponible</td>
+          </tr>
+          <tr>
+            <td>12:30</td>
+            <td>Dr. Roza</td>
+            <td><a href="#">Solicita hora aquí</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>
